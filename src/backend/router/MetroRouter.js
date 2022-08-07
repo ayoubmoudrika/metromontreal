@@ -7,7 +7,7 @@ class MetroRouter {
         this.init();
     }
 
-    async metros(req, res, next) {
+    async metros(req, res) {
         try{
             let conn = await pool.getConnection();
 
@@ -23,7 +23,7 @@ class MetroRouter {
     }
 
     init() {
-        this.metroRouter().get('/gti525/v1/metros', this.metros.bind(this));
+        this.metroRouter.get('/metromtl/v1/metros', this.metros.bind(this));
     }
 
 }
