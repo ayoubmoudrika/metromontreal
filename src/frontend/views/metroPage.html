@@ -2,44 +2,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Home Page</title>
+
+  <link rel="stylesheet" type="text/css" href='/src/frontend/css/metros.css'/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script src="/src/frontend/scripts/RightPanel.js"></script>
 </head>
 
 
 <body>
-<div id="left-block">
-  <ul style="list-style-type:none" class="Myleft">
-    <br>
-    <li>
-      <button id="buttonCV" class="buttonCV">Comptages de vélos</button>
-    </li>
-    <br>
-    <li>
-      <button id="buttonPI" class="buttonPI">Points d'intérêt</button>
-    </li>
-    <br>
-    <li>
-      <button id="buttonFontaines" class="buttonPI">Fontaines à boire</button>
-    </li>
-    <br>
-    <li>
-      <button id="buttonAtelierRep" class="buttonPI">Réparation de vélos</button>
-    </li>
-    <br>
-    <li>
-      <button id="buttonAjouterPI" class="buttonPI">Ajouter point d'intérêt</button>
-    </li>
-    <br>
-  </ul>
-</div>
 <div id="right-block" class="Myright">
   <h3 id="rightPanelTitle"><b>Metro station of the city of Montreal</b></h3>
   <hr/>
   <script>
-    setDataListCompteurs();
+    setDataListMetros();
   </script>
   <div style="height:55%; overflow-y: scroll;">
-    <table id="myTable" class="MyTable">
-
+    <table id="metroTable" class="tables">
     </table>
   </div>
   <hr/>
@@ -47,6 +25,7 @@
 </body>
 
 <footer class="footer">
+  <p>Contact: Ayoub Moudrika, <a href="mailto:ayoub.moudrika.1@ens.etsmtl.ca">ayoub.moudrika.1@ens.etsmtl.ca</a><br>
 </footer>
 <script src="/src/main.js"></script>
 </html>

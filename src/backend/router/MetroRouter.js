@@ -1,10 +1,15 @@
 import express from 'express';
-import pool from '../server.js';
+import pool from '../../server.js';
 
 class MetroRouter {
+
     constructor() {
         this.metroRouter = express.Router();
         this.init();
+    }
+
+    async pageMetros(req, res) {
+        res.render('metroPage.html');
     }
 
     async metros(req, res) {
@@ -23,6 +28,7 @@ class MetroRouter {
     }
 
     init() {
+        this.metroRouter.get('/metromtl/v1/metrosPage', this.pageMetros.bind(this));
         this.metroRouter.get('/metromtl/v1/metros', this.metros.bind(this));
     }
 

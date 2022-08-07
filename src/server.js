@@ -1,5 +1,5 @@
 import express from 'express';
-import metrosRouter from "./router/MetroRouter.js";
+import metrosRouter from "./backend/router/MetroRouter.js";
 import path from 'path';
 import {fileURLToPath} from 'url';
 import { renderFile } from 'ejs';
@@ -23,7 +23,7 @@ function routes() {
     let router = express.Router();
 
     router.get('/', (req, res) => {
-        res.redirect('/metromtl/v1/metros');
+        res.redirect('/metromtl/v1/metrosPage');
     });
 
     app.use('/', router);  // routage de base
